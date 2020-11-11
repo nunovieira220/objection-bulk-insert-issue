@@ -1,0 +1,21 @@
+{
+  "name": "objection-plugin-transaction",
+  "version": "1.0.0",
+  "description": "Objection.js issue repository related with transactions on model plugins",
+  "main": "./src/index.js",
+  "scripts": {
+    "clear-migrations": "knex migrate:rollback --all",
+    "docker": "docker-compose up",
+    "run-migrations": "knex migrate:latest",
+    "start": "npm run run-migrations && node src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.2",
+    "knex": "^0.21.12",
+    "objection": "^2.2.3",
+    "pg": "^8.5.0",
+    "uuid": "^8.3.1"
+  }
+}

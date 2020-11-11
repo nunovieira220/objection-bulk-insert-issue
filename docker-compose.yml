@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  database:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=playground_user
+      - POSTGRES_PASSWORD=playground_pw
+      - POSTGRES_DB=playground_db
+    volumes:
+      - database-data:/var/lib/postgresql/data/
+volumes:
+  database-data:
